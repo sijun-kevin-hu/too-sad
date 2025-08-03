@@ -1,5 +1,6 @@
 import time
 import numpy as np
+import random
 import webbrowser
 import cv2 as cv
 from plyer import notification
@@ -17,7 +18,19 @@ recent_emotions_limit = 10
 last_trigger_time = 0
 dominant_emotion = "Detecting..."
 
-happy_video_url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1'
+happy_videos = [
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "https://www.youtube.com/watch?v=9bZkp7q19f0",
+    "https://www.youtube.com/watch?v=J---aiyznGQ",
+    "https://www.youtube.com/watch?v=lXMskKTw3Bc",
+]
+
+happy_messages = [
+    "Cheer up! 🌈 Here's something to make you smile.",
+    "Feeling down? 😄 Take a quick happy break!",
+    "TooSad detected sadness! Launching happiness...",
+    "Your happiness matters. Here's a mood boost 🎵",
+]
 
 # Helper to update recent emotions
 def update_recent_emotion(emotion, sadness_confidence):
@@ -66,30 +79,34 @@ while True:
     # Our operations on the frame come here
     if frame_count % frame_count_limit == 0:
         dominant_emotion, sadness_confidence, face_confidence = analyze_emotion(frame)
-        print("Dominant emotion: ", dominant_emotion)
-        print("Sadness Confidence: ", sadness_confidence)
-        print("Confidence: ", face_confidence)
+        print(f"Detected Dominant emotion: {dominant_emotion}. Sadness Confidence: {sadness_confidence}")
         if (face_confidence > 0.8):
             update_recent_emotion(dominant_emotion, sadness_confidence)
             
         print(recent_emotions)
         
         if isSad():
+            print("Detected sadness. Triggering.")
             current_time = time.time()
+            happy_video_url = random.choice(happy_videos)
+            happy_message = random.choice(happy_messages)
+            
             if current_time - last_trigger_time > cooldown_seconds:
                 notification.notify(
-                    title="YOU'RE TOO SAD",
-                    message="YOU NEED TO CHEER UP",
-                    timeout=10
+                    title="TOO SAD ALERT",
+                    message=happy_message,
+                    timeout=10,
+                    app_icon='./sun.png'
                 )
                 webbrowser.open(happy_video_url)
                 last_trigger_time = current_time
+                print(f"Notification Sent + YouTube link opened")
                 
     # Display the resulting frame
-    cv.putText(frame, dominant_emotion, (50,50), cv.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2, cv.LINE_AA)
-    cv.imshow('frame', frame)
-    if cv.waitKey(30) == ord('q'):
-        break
+    # cv.putText(frame, dominant_emotion, (50,50), cv.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2, cv.LINE_AA)
+    # cv.imshow('frame', frame)
+    # if cv.waitKey(30) == ord('q'):
+    #     break
 
 # When everything done, release the capture
 cap.release()
