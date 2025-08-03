@@ -2,6 +2,7 @@ import time
 import random
 import webbrowser
 import cv2 as cv
+import sys
 from plyer import notification
 from log_utils import log_event
 from config import frame_count_limit, recent_emotions_limit, cooldown_seconds, happy_videos, happy_messages
@@ -10,7 +11,7 @@ from emotion_utils import analyze_emotion, update_recent_emotion, is_sad
 cap = cv.VideoCapture(0)
 if not cap.isOpened():
     print("Cannot open camera")
-    exit()
+    sys.exit()
     
 frame_count = 0
 recent_emotions = []
@@ -54,7 +55,7 @@ while True:
                 webbrowser.open(happy_video_url)
                 last_trigger_time = current_time
                 print(f"Notification Sent + YouTube link opened")
-                log_event(dominant_emotion, sadness_confidence, face_confidence, "Notification Sent + YouTube link opened")
+                log_event(dominant_emotion, sadness_confidence, face_confidence, "Notification Sent + YouTube link po")
                 
     # Display the resulting frame
     # cv.putText(frame, dominant_emotion, (50,50), cv.FONT_HERSHEY_SIMPLEX, 1, (0,255,0), 2, cv.LINE_AA)

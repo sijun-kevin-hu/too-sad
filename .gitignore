@@ -1,1 +1,5 @@
 /.venv
+/.dist
+dist
+build
+too_sad_log.txt
