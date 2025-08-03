@@ -2,6 +2,7 @@ import time
 import numpy as np
 import webbrowser
 import cv2 as cv
+from plyer import notification
 from deepface import DeepFace
 
 cap = cv.VideoCapture(0)
@@ -13,6 +14,7 @@ frame_count = 0
 frame_count_limit = 20
 recent_emotions = []
 recent_emotions_limit = 10
+last_trigger_time = 0
 dominant_emotion = "Detecting..."
 
 happy_video_url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1'
@@ -60,7 +62,6 @@ while True:
         break
     
     frame_count += 1
-    last_trigger_time = 0
     cooldown_seconds = 30
     # Our operations on the frame come here
     if frame_count % frame_count_limit == 0:
@@ -76,7 +77,11 @@ while True:
         if isSad():
             current_time = time.time()
             if current_time - last_trigger_time > cooldown_seconds:
-                print("Opening video!")           
+                notification.notify(
+                    title="YOU'RE TOO SAD",
+                    message="YOU NEED TO CHEER UP",
+                    timeout=10
+                )
                 webbrowser.open(happy_video_url)
                 last_trigger_time = current_time
                 
