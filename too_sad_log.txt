@@ -1,0 +1,34 @@
+2025-08-03 17:12:43 | neutral | sadness confidence: 0.55 | face confidnece: 0.91 | action: Detected emotion
+2025-08-03 17:12:43 | neutral | sadness confidence: 0.55 | face confidnece: 0.91 | action: Updated recent emotions
+2025-08-03 17:12:45 | sad | sadness confidence: 52.83 | face confidnece: 0.92 | action: Detected emotion
+2025-08-03 17:12:45 | sad | sadness confidence: 52.83 | face confidnece: 0.92 | action: Updated recent emotions
+2025-08-03 17:12:46 | neutral | sadness confidence: 0.23 | face confidnece: 0.91 | action: Detected emotion
+2025-08-03 17:12:46 | neutral | sadness confidence: 0.23 | face confidnece: 0.91 | action: Updated recent emotions
+2025-08-03 17:12:47 | neutral | sadness confidence: 2.19 | face confidnece: 0.92 | action: Detected emotion
+2025-08-03 17:12:47 | neutral | sadness confidence: 2.19 | face confidnece: 0.92 | action: Updated recent emotions
+2025-08-03 17:12:47 | neutral | sadness confidence: 2.29 | face confidnece: 0.93 | action: Detected emotion
+2025-08-03 17:12:47 | neutral | sadness confidence: 2.29 | face confidnece: 0.93 | action: Updated recent emotions
+2025-08-03 17:12:48 | neutral | sadness confidence: 1.45 | face confidnece: 0.90 | action: Detected emotion
+2025-08-03 17:12:48 | neutral | sadness confidence: 1.45 | face confidnece: 0.90 | action: Updated recent emotions
+2025-08-03 17:12:49 | neutral | sadness confidence: 11.85 | face confidnece: 0.94 | action: Detected emotion
+2025-08-03 17:12:49 | neutral | sadness confidence: 11.85 | face confidnece: 0.94 | action: Updated recent emotions
+2025-08-03 17:12:50 | neutral | sadness confidence: 1.43 | face confidnece: 0.93 | action: Detected emotion
+2025-08-03 17:12:50 | neutral | sadness confidence: 1.43 | face confidnece: 0.93 | action: Updated recent emotions
+2025-08-03 17:12:51 | neutral | sadness confidence: 2.60 | face confidnece: 0.93 | action: Detected emotion
+2025-08-03 17:12:51 | neutral | sadness confidence: 2.60 | face confidnece: 0.93 | action: Updated recent emotions
+2025-08-03 17:12:53 | neutral | sadness confidence: 1.13 | face confidnece: 0.93 | action: Detected emotion
+2025-08-03 17:12:53 | neutral | sadness confidence: 1.13 | face confidnece: 0.93 | action: Updated recent emotions
+2025-08-03 17:12:54 | neutral | sadness confidence: 2.90 | face confidnece: 0.93 | action: Detected emotion
+2025-08-03 17:12:54 | neutral | sadness confidence: 2.90 | face confidnece: 0.93 | action: Updated recent emotions
+2025-08-03 17:12:55 | neutral | sadness confidence: 0.94 | face confidnece: 0.94 | action: Detected emotion
+2025-08-03 17:12:55 | neutral | sadness confidence: 0.94 | face confidnece: 0.94 | action: Updated recent emotions
+2025-08-03 17:12:56 | neutral | sadness confidence: 0.69 | face confidnece: 0.92 | action: Detected emotion
+2025-08-03 17:12:56 | neutral | sadness confidence: 0.69 | face confidnece: 0.92 | action: Updated recent emotions
+2025-08-03 17:12:57 | neutral | sadness confidence: 1.18 | face confidnece: 0.92 | action: Detected emotion
+2025-08-03 17:12:57 | neutral | sadness confidence: 1.18 | face confidnece: 0.92 | action: Updated recent emotions
+2025-08-03 17:12:58 | neutral | sadness confidence: 0.71 | face confidnece: 0.91 | action: Detected emotion
+2025-08-03 17:12:58 | neutral | sadness confidence: 0.71 | face confidnece: 0.91 | action: Updated recent emotions
+2025-08-03 17:12:59 | neutral | sadness confidence: 0.38 | face confidnece: 0.93 | action: Detected emotion
+2025-08-03 17:12:59 | neutral | sadness confidence: 0.38 | face confidnece: 0.93 | action: Updated recent emotions
+2025-08-03 17:13:00 | neutral | sadness confidence: 0.02 | face confidnece: 0.95 | action: Detected emotion
+2025-08-03 17:13:00 | neutral | sadness confidence: 0.02 | face confidnece: 0.95 | action: Updated recent emotions
