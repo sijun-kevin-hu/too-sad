@@ -5,7 +5,7 @@ a = Analysis(
     ['app.py'],
     pathex=[],
     binaries=[],
-    datas=[('sun.png', '.')],
+    datas=[('sun.png', '.'), ('/Users/kevinhu/Programming/too-sad/.venv/lib/python3.9/site-packages/cv2/data', 'cv2/data')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
